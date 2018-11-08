@@ -12,8 +12,8 @@ namespace ioop2starter
         public string Name;
         public string Color;
         public float Price;
-        public uint PercentInkRemaining;
-        public bool IsEmpty;
+        private uint PercentInkRemaining;
+        private bool IsEmpty; 
 
 
         //Constructors
@@ -22,13 +22,12 @@ namespace ioop2starter
 
         }
 
-        public Pen(string name, string color, float price, uint percentInkRemaining, bool isEmpty)
+        public Pen(string name, string color, float price)
         {
             Name = name;
             Color = color;
             Price = price;
-            PercentInkRemaining = percentInkRemaining;
-            IsEmpty = isEmpty;
+           
         }
 
 

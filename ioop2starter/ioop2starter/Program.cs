@@ -19,10 +19,9 @@ namespace ioop2starter
             myCrystalBic.Name = "Crystal Bic";
             myCrystalBic.Color = "RED";
             myCrystalBic.Price = 0.50f;
-            myCrystalBic.PercentInkRemaining = 100;
-            myCrystalBic.IsEmpty = false;
+            
 
-            Pen mySharpie = new Pen("Sharpie", "BLACK", 1.49f, 100, false);
+            Pen mySharpie = new Pen("Sharpie", "BLACK", 1.49f);
 
 
 
