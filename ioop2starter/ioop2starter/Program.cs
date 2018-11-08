@@ -13,31 +13,19 @@ namespace ioop2starter
 
             Console.WriteLine("I.OOP.0x02:::::");
 
-            //Create some pens...
+            Pen colter = new Pen();
+            colter.Name = "The Colter Pen";
+            colter.HowManyPens();
 
-            Pen myCrystalBic = new Pen();
-            myCrystalBic.Name = "Crystal Bic";
-            myCrystalBic.Color = "RED";
-            myCrystalBic.Price = 0.50f;
+
+            Pen jackie = new Pen("Jackelin", "Green", 1.50f);
+            jackie.HowManyPens();
+            colter.HowManyPens();
+
+
+
+
             
-
-            Pen mySharpie = new Pen("Sharpie", "BLACK", 1.49f);
-
-
-
-            //Try some methods...
-            mySharpie.WriteName();
-            mySharpie.WriteColor();
-            mySharpie.WriteInkLevel();
-            mySharpie.UseInk(10);
-            mySharpie.WriteInkLevel();
-            Console.WriteLine(mySharpie.GetCurrentMonetaryValue());
-            mySharpie.Refill();
-            mySharpie.WriteInkLevel();
-
-
-
-
             Console.ReadKey();
         }
     }
