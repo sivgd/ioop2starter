@@ -8,6 +8,9 @@ namespace ioop2starter
 {
     class Pen
     {
+        //Set a static property
+        private static uint NumberOfPens = 0;
+
         //Properties
         public string Name;
         public string Color;
@@ -19,19 +22,42 @@ namespace ioop2starter
         //Constructors
         public Pen()
         {
-
+            PercentInkRemaining = 100;
+            IsEmpty = false;
+            NumberOfPens++;
         }
 
-        public Pen(string name, string color, float price, uint percentInkRemaining, bool isEmpty)
+        public Pen(string name, string color, float price)
         {
             Name = name;
             Color = color;
             Price = price;
-           
+            PercentInkRemaining = 100;
+            IsEmpty = false;
+            NumberOfPens++;
+
         }
 
 
         //Methods
+
+        public void PrintPenCount()
+        {
+            Console.WriteLine("Number of Pens = " + NumberOfPens);
+        }
+
+
+        public void SetInkLevel(uint inkLevel)
+        { 
+            if (inkLevel > 100 || inkLevel < 0)
+            {
+                return;
+            }
+            PercentInkRemaining = inkLevel;
+
+        }
+
+
         public void WriteName()
         {
             Console.WriteLine("My name is " + this.Name);

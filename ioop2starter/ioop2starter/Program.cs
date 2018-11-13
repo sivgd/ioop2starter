@@ -15,26 +15,19 @@ namespace ioop2starter
 
             //Create some pens...
 
-            Pen myCrystalBic = new Pen();
-            myCrystalBic.Name = "Crystal Bic";
-            myCrystalBic.Color = "RED";
-            myCrystalBic.Price = 0.50f;
-           
-            Pen mySharpie = new Pen("Sharpie", "BLACK", 1.49f, 100, false);
+            Pen expo = new Pen("Expo", "Purple", 1.50f);
+            expo.WriteName();
+            expo.SetInkLevel(60);
+            expo.WriteInkLevel();
+            expo.SetInkLevel(9001);
+            expo.WriteInkLevel();
 
+            expo.PrintPenCount();
 
+            Pen bic = new Pen();
 
-            //Try some methods...
-            mySharpie.WriteName();
-            mySharpie.WriteColor();
-            mySharpie.WriteInkLevel();
-            mySharpie.UseInk(10);
-            mySharpie.WriteInkLevel();
-            Console.WriteLine(mySharpie.GetCurrentMonetaryValue());
-            mySharpie.Refill();
-            mySharpie.WriteInkLevel();
-
-
+            bic.PrintPenCount();
+            expo.PrintPenCount();
 
 
             Console.ReadKey();
